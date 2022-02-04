@@ -1,0 +1,33 @@
+Breakpoint 1, main () at p1original.c:12
+12  int main(){
+(gdb) n
+14      input(&a,&b);
+(gdb) s
+input (a=0x7fff5453950c, b=0x7fff54539510) at p1original.c:3
+3       printf("Enter 2 numbers to be added\n");
+(gdb) n
+Enter 2 numbers to be added
+4       scanf("%d %d",a,b);
+(gdb) n
+1
+2
+5   }
+(gdb) 
+main () at p1original.c:15
+15      add(a,b,&sum);
+(gdb) s
+add (a=1, b=2, sum=0x7fff54539514) at p1original.c:7
+7       *sum=a+b;
+(gdb) n
+8   }
+(gdb) n
+main () at p1original.c:16
+16      output(a,b,sum);
+(gdb) s
+output (a=1, b=2, sum=3) at p1original.c:10
+10      printf("sum of %d + %d is %d",a,b,sum);
+(gdb) n
+11  }
+(gdb) n
+main () at p1original.c:17
+17  }
