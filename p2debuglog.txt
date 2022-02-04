@@ -1,0 +1,68 @@
+Breakpoint 1, main () at p2original.c:35
+35      a=input();
+(gdb) s
+input () at p2original.c:2
+2   int input(){
+(gdb) n
+4       printf("Enter the numbers to be compared\n");
+(gdb) 
+Enter the numbers to be compared
+5       scanf("%d",&a);
+(gdb) n
+1
+6       return a;
+(gdb) n
+7   }
+(gdb) n
+main () at p2original.c:36
+36      b=input();
+(gdb) s
+input () at p2original.c:2
+2   int input(){
+(gdb) n
+4       printf("Enter the numbers to be compared\n");
+(gdb) n
+Enter the numbers to be compared
+5       scanf("%d",&a);
+(gdb) n
+2
+6       return a;
+(gdb) n
+7   }
+(gdb) n
+main () at p2original.c:37
+37      c=input();
+(gdb) n
+Enter the numbers to be compared
+n
+38      largest=cmp(a,b,c);
+(gdb) s
+cmp (a=1, b=2, c=2) at p2original.c:10
+10      if(a>b&&a>c){
+(gdb) n
+13      else if(b>c){
+(gdb) n
+17          largest=c;
+(gdb) n
+20      return largest;
+(gdb) n
+21  }
+(gdb) n
+main () at p2original.c:39
+39      output(a, b, c, largest);
+(gdb) s
+output (a=1, b=2, c=2, largest=2) at p2original.c:23
+23      if(largest==a){
+
+(gdb) n
+26      else if(largest==b){
+(gdb) n
+27          printf("%d is the largest\n",b);
+(gdb) n
+2 is the largest
+32  }
+(gdb) n
+main () at p2original.c:40
+40      return 0;
+(gdb) n
+42  }(gdb) 
